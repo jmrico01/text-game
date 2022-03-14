@@ -1,0 +1,10 @@
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+WorkingDirectory=/usr/bin/text-game
+ExecStart=/usr/bin/text-game/text-game 443 /etc/letsencrypt/live/DOMAIN.TODO/fullchain.pem /etc/letsencrypt/live/DOMAIN.TODO/privkey.pem
